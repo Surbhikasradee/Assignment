@@ -1,0 +1,24 @@
+function submitForm() {
+            const Name = document.getElementById("Name").value;
+            const email = document.getElementById("email").value;
+
+            // Validate the form data here (add validation logic as needed)
+
+            // Display the popup with the form values
+            const popupContent = document.getElementById("popupContent");
+            popupContent.innerHTML = `
+                <p><strong>Name:</strong> ${Name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+            ;
+
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function resetForm() {
+            document.getElementById("surveyForm").reset();
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            resetForm();
+        }
